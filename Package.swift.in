@@ -22,7 +22,7 @@ let package = Package(
         .binaryTarget(name: "libpython3", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libpython3.xcframework.zip", checksum: "59d2fd89373a8504e894352190e5fade835698bcb5d52fdaef5c998d2bf5c318"),
         .binaryTarget(name: "libssl", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libssl.xcframework.zip", checksum: "bba7c0517a77f5789fcb45eb73f1df63dfe961999b7c60ad6b2ccb505f34b6dd"),
         .binaryTarget(name: "libcrypto", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libcrypto.xcframework.zip", checksum: "0a528f92019ee0e3c5b8efc6eb27416f386ad1a322acafabb7de1b8b0508e386"),
-        .binaryTarget(name: "libffi", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libffi.xcframework.zip", checksum: "5f5d7a12122adf68e7771d1185c1953964799a766052c801d8726bc301eb8e43"),
+        .binaryTarget(name: "libffi", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libffi.xcframework.zip", checksum: "ea89ccb657e310f91075c0e086083631d0b1a6d6e033efbb284ea353e32c894c"),
         .target(name: "LinkPython",
                 dependencies: [
                     "libpython3",
