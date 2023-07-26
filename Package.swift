@@ -6,7 +6,7 @@ let package = Package(
     name: "Python-iOS",
     platforms: [
         .iOS(.v9),
-        .macOS(.v10_14),
+        .macOS(.v12),
         .tvOS(.v12),
         .watchOS(.v5)
     ],
