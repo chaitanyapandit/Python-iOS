@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Python-iOS",
-    platforms: [.iOS(.v9)],
+    platforms: [.iOS(.v9), .macOS(.v13)],
     products: [
         .library(
             name: "Python-iOS",
