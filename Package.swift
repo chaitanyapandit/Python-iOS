@@ -6,10 +6,9 @@ let package = Package(
     name: "Python-iOS",
     platforms: [
         .iOS(.v9),
-        .macOS(.v12),
-        .tvOS(.v12),
-        .watchOS(.v5)
+        .macOS(.v10_15)
     ],
+
     products: [
         .library(
             name: "Python-iOS",
@@ -20,10 +19,10 @@ let package = Package(
             ]),
     ],
     targets: [
-        .binaryTarget(name: "libpython3", url: "https://github.com/kewlbear/Python-iOS/releases/download/0.0.20211030082633/libpython3.xcframework.zip", checksum: "fcf539304710ca15b61793937e63491d5cbf96c208b48dc1c1bf9aebd17d0288"),
-        .binaryTarget(name: "libssl", url: "https://github.com/kewlbear/Python-iOS/releases/download/0.0.20211030082633/libssl.xcframework.zip", checksum: "ca16c728275205dbd00df411874f00ce29348868fb66f747dd08f104bcb73112"),
-        .binaryTarget(name: "libcrypto", url: "https://github.com/kewlbear/Python-iOS/releases/download/0.0.20211030082633/libcrypto.xcframework.zip", checksum: "ab8106637f7ad7259c6b1af324f8c5eb9f99f8c20529050ffa3c66d8d3cffc91"),
-        .binaryTarget(name: "libffi", url: "https://github.com/kewlbear/Python-iOS/releases/download/0.0.20211030082633/libffi.xcframework.zip", checksum: "4f5991483df1393ae3bca1365c21594a6b02a61fa328139cbfdfd21a87b2014a"),
+        .binaryTarget(name: "libpython3", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libpython3.xcframework.zip", checksum: "434baeacdbf84e6d9b595d4930080b04c5102ee22f1cc51b013c393eec43393f"),
+        .binaryTarget(name: "libssl", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libssl.xcframework.zip", checksum: "448ed0b198b587d6c034015b5253c96682dfb8cc53b61db778a6ee03c6137f42"),
+        .binaryTarget(name: "libcrypto", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libcrypto.xcframework.zip", checksum: "7a1e805a99b8b162cc895a05746c460c77999a12f7b9dff0755f88c28da22cd4"),
+        .binaryTarget(name: "libffi", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libffi.xcframework.zip", checksum: "5c5c91f0152e7a086ff06ee53c5ee763156bcf5aeb2a65afc6d9997f58b20577"),
         .target(name: "LinkPython",
                 dependencies: [
                     "libpython3",
