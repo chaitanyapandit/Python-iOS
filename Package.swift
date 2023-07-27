@@ -19,10 +19,10 @@ let package = Package(
             ]),
     ],
     targets: [
-        .binaryTarget(name: "libpython3", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libpython3.xcframework.zip", checksum: "59d2fd89373a8504e894352190e5fade835698bcb5d52fdaef5c998d2bf5c318"),
-        .binaryTarget(name: "libssl", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libssl.xcframework.zip", checksum: "bba7c0517a77f5789fcb45eb73f1df63dfe961999b7c60ad6b2ccb505f34b6dd"),
-        .binaryTarget(name: "libcrypto", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libcrypto.xcframework.zip", checksum: "0a528f92019ee0e3c5b8efc6eb27416f386ad1a322acafabb7de1b8b0508e386"),
-        .binaryTarget(name: "libffi", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libffi.xcframework.zip", checksum: "ea89ccb657e310f91075c0e086083631d0b1a6d6e033efbb284ea353e32c894c"),
+        .binaryTarget(name: "libpython3", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libpython3.xcframework.zip", checksum: "dcfec28bf5d40b8180d2d5c84baca5be98ad52b543e4516ee1c5b2f7f268d24f"),
+        .binaryTarget(name: "libssl", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libssl.xcframework.zip", checksum: "7f01d582114ff1ed9595e69fe0dbfd9ecaddf4ecc59fc069d8a23739f582ddeb"),
+        .binaryTarget(name: "libcrypto", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libcrypto.xcframework.zip", checksum: "1d9a714c4ddf3d4018146797644f471b1163ce4c479edf69ee0ea28bb0d9766a"),
+        .binaryTarget(name: "libffi", url: "https://github.com/chaitanyapandit/Python-iOS/releases/download/macOS-target/libffi.xcframework.zip", checksum: "a591273c5cb86a2444e2f6c25be86f0016310c2f745b3a094ab8ca1dbd301c20"),
         .target(name: "LinkPython",
                 dependencies: [
                     "libpython3",
