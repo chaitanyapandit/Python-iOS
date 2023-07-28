@@ -98,15 +98,14 @@ public func initialize() {
     // putenv("PYTHONVERBOSE=1");
     // putenv("PYOBJUS_DEBUG=1");
 
-    let pythonHome = Bundle.module.bundleURL.path
-    setenv("PYTHONHOME", pythonHome, 1)
-
+    var pythonHome = Bundle.module.bundleURL.path
     #if TARGET_OS_IPHONE
-        setenv("PYTHONPATH", "\(pythonHome)/lib/python3.9/:\(pythonHome)/lib/python3.9/site-packages", 1)
     #else
-        setenv("PYTHONPATH", "\(pythonHome)/Contents/Resources/lib/python3.9/:\(pythonHome)/Contents/Resources/lib/python3.9/site-packages", 1)
+        pythonHome = "\(pythonHome)/Contents/Resources/"
     #endif
 
+    setenv("PYTHONHOME", pythonHome, 1)
+    setenv("PYTHONPATH", "\(pythonHome)/lib/python3.9/:\(pythonHome)/lib/python3.9/site-packages", 1)
     setenv("TMP", NSTemporaryDirectory(), 1)
 
     _ = PythonInitialize(0, nil, importer)
