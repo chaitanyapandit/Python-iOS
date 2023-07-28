@@ -99,8 +99,7 @@ public func initialize() {
     // putenv("PYOBJUS_DEBUG=1");
 
     var pythonHome = Bundle.module.bundleURL.path
-    #if TARGET_OS_IPHONE
-    #else
+    #if os(macOS)
         pythonHome = "\(pythonHome)/Contents/Resources"
     #endif
 
