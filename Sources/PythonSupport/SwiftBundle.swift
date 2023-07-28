@@ -101,7 +101,7 @@ public func initialize() {
     var pythonHome = Bundle.module.bundleURL.path
     #if TARGET_OS_IPHONE
     #else
-        pythonHome = "\(pythonHome)/Contents/Resources/"
+        pythonHome = "\(pythonHome)/Contents/Resources"
     #endif
 
     setenv("PYTHONHOME", pythonHome, 1)
